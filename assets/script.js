@@ -3,7 +3,7 @@
 //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 //var dateTime = date+' '+time;
 var container = $(".container")
-var currentTime = new moment().format("HH:mm");
+var currentTime = new moment().format("h A");
 $("#currentDay").text(currentTime)
 
 
@@ -22,16 +22,9 @@ for (var i = 9; i < 18; i++) {
     var m = moment().set("hour", i)
     Times.push(m.format("h A"))
    
-
-    if (moment(Times[i]).isBefore(currentTime)) {
-        console.log("yes");
-    
-    }
-    else{
-        console.log("hi");
-        
-    }
 }
+
+
 
 
 // Thetimes = [];
@@ -65,10 +58,25 @@ for (var i = 0; i < Times.length; i++) {
     saveCol.addClass("col col-md-2 saveBtn")
     // saveCol.css( " border-bottom-right-radius: 15px");
 
-
-
+    if (Times[i]< currentTime ) {
+        console.log("yes") 
+        textarea.css("background-color", "grey") 
+    }
+    else if (Times[i] > currentTime){
+        textarea.css("background-color", "green") 
+    }
+    else if (Times[i] = currentTime){
+        textarea.css("background-color", "red") 
+    }
 
 }
+
+ console.log(Times[0]);
+
+
+
+
+
 
 // our array
 var movies = ["Reservoir Dogs", "Pulp Fiction", "Jackie Brown",
