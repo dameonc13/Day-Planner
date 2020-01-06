@@ -1,6 +1,8 @@
 
 var container = $(".container")
-var currentTime = new moment().format("h A");
+
+//Adds current date and time to the header
+var currentTime = new moment().format("HH A");
 var currentDate = new moment().format("MM-DD-YYYY")
 $("#currentDay").text( currentDate)
 $("header").append( currentTime)
@@ -13,7 +15,7 @@ Times = [];
 for (var i = 9; i < 18; i++) {
     i += 0;
     var m = moment().set("hour", i)
-    Times.push(m.format("h A"))
+    Times.push(m.format("HH A"))
    
 }
 
@@ -51,14 +53,14 @@ for (var i = 0; i < Times.length; i++) {
     saveCol.addClass("col col-md-2 saveBtn")
     
 // Apply  a specific color to each timeblock depending on what the current time is  
-    if (Times[i]< currentTime ) {
+    if (Times[i] < currentTime) {
         
         textarea.css("background-color", "grey") 
     }
     else if (Times[i] > currentTime){
         textarea.css("background-color", "green") 
     }
-    else if (Times[i] = currentTime){
+    else if (Times[i] == currentTime){
         textarea.css("background-color", "red") 
     }
 
@@ -80,10 +82,12 @@ $(".saveBtn").on("click", function (event) {
     var activity = ''
 
     for (var i = 0; i < usrinput.length; i++) {
-        activity = (usrinput[i].value)
+        activity = (usrinput.value)
 
         localStorage.setItem("activity", activity );
     }
+
+console.log( activity);
 });
 
 tfrdata = []
