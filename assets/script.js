@@ -47,7 +47,7 @@ for (var i = 0; i < Times.length; i++) {
     form.addClass("form-group");
     div.addClass("row");
     timeCol.addClass("col col-md-2 hour ");
-    infoCol.addClass("col col-md-9 time-block  ");
+    infoCol.addClass("col col-md-9 ");
     saveCol.addClass("fa fa-save")
     saveCol.addClass("col col-md-1 saveBtn")
     
