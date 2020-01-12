@@ -3,6 +3,7 @@ var container = $(".container")
 
 //Adds current date and time to the header
 var currentTime = new moment().format("HH mm A");
+var currentTimes = new moment().format("HH A");
 var currentDate = new moment().format("MM-DD-YYYY")
 $("#currentDay").text( currentDate)
 $("header").append( currentTime)
@@ -52,14 +53,14 @@ for (var i = 0; i < Times.length; i++) {
     saveCol.addClass("col col-md-1 saveBtn")
     
 // Apply  a specific color to each timeblock depending on what the current time is  
-    if (Times[i] < currentTime) {
+    if (Times[i] < currentTimes) {
         
         textarea.addClass("past") 
     }
-    else if (Times[i] > currentTime){
+    else if (Times[i] == currentTimes){
         textarea.addClass("present")
     }
-    else if (Times[i] == currentTime){
+    else if (Times[i] > currentTimes){
         textarea.addClass("future")
     }
 
