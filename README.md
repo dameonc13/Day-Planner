@@ -6,6 +6,7 @@ In this project I create a Day Planner mostly for a 9-5 individual but is also a
 
 @Author: Dameon Charley
 
+# Table of Contents
 1. Header
 2. Day-Planner
 3. Built With
@@ -26,5 +27,4 @@ In this project I create a Day Planner mostly for a 9-5 individual but is also a
 
 # Live Depoyment
 
-4: https://github.com/dameonc13/Day-Planner
-
+4: https://dameonc13.github.io/Day-Planner/
